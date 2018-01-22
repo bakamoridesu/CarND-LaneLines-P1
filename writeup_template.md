@@ -10,9 +10,8 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
-
-![image1]: ./examples/line-segments-example.jpg "Origin image example"
-![image2]: ./examples/grayscale.jpg "Modified image example"
+![Origin image example](/examples/line-segments-example.jpg)
+![Modified image example](/examples/grayscale.jpg)
 
 ---
 
