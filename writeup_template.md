@@ -12,7 +12,7 @@ The goals / steps of this project are the following:
 
 Origin image example | Modified image example
 ------------ | -------------
-![Origin image example](/examples/line-segments-example.jpg) | ![Modified image example](/examples/grayscale.jpg)
+![Origin image example](/examples/line-segments-example.jpg) | ![Modified image example](/examples/laneLines_thirdPass.jpg)
 
 
 
