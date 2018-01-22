@@ -21,10 +21,10 @@ Origin image example | Modified image example
 ---
 ## And this is how it works:
 
-First I need to stangartize input images. To do that, I resize image to the size of 540x960
+*First I need to stangartize input images. To do that, I resize image to the size of 540x960
 A lane can be drawn in any color, so I convert image to grayscale. Then I apply Gaussian blur for suppressing noise and spurious gradients by averaging. 
-[Origin image example](/examples/line-segments-example.jpg)
-The way to find edges in computer vision is finding a gradient for every pixel, so if a color of a given pixel changes too fast, this pixel is probably a part of edge. To apply this technique, I use Canny edge detection algorithm. 
+![Origin image example](/examples/line-segments-example.jpg)
+*The way to find edges in computer vision is finding a gradient for every pixel, so if a color of a given pixel changes too fast, this pixel is probably a part of edge. To apply this technique, I use Canny edge detection algorithm. 
 ![alt text][image1]
 Before considering which edges are lane lines, I need to "select" a polygonial region in front of the camera, where lane lines often are. 
 ![alt text][image1]
