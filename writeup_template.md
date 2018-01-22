@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Pipeline description.
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
 
