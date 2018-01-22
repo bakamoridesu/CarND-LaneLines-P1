@@ -9,7 +9,10 @@ The goals / steps of this project are the following:
 * Reflect on the work in a written report
 
 ---
-## Images below shows the results of finding lane lines:
+## Images below shows the result of finding lane lines:
+
+
+
 
 Origin image example | Modified image example
 ------------ | -------------
