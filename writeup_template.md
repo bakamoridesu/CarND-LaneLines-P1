@@ -18,33 +18,34 @@ Origin image example | Modified image example
 ------------ | -------------
 ![Origin image example](/examples/line-segments-example.jpg) | ![Modified image example](/examples/laneLines_thirdPass.jpg)
 
-
-
 ---
+## And this is how it works:
 
-### Reflection
-
-### 1. Pipeline description.
-
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
+First I need to stangartize input images. To do that, I resize image to the size of 540x960
+A lane can be drawn in any color, so I convert image to grayscale. Then I apply Gaussian blur for suppressing noise and spurious gradients by averaging. 
 ![alt text][image1]
+The way to find edges in computer vision is finding a gradient for every pixel, so if a color of a given pixel changes too fast, this pixel is probably a part of edge. To apply this technique, I use Canny edge detection algorithm. 
+![alt text][image1]
+Before considering which edges are lane lines, I need to "select" a polygonial region in front of the camera, where lane lines often are. 
+![alt text][image1]
+Inside this area it is easy to find strict lines, and Hough Transform is helpful here. 
+![alt text][image1]
+At this point I found all possible lines in the selected region. And in order to draw a single line on the left and right lanes, I modified the draw_lines() function this way:
+1. Found all lines which are supposed to be a left lane line. 
+2. Found all lines which are supposed to be a right lane line. 
+3. For both set of lines I found the mean of the lowest X-value and the mean of the highest X-value. Having Y-coordinates for those points, I can draw one solid line between them.
+![alt text][image1]
+For the 3rd, challenging video, I made some changes in the function which draws one solid line. I cut the rectangle between the hindrance at the bottom and the bending point of the lines. It seems like it works... for the most parts of the video.
 
+### 2. Potential shortcomings with the current pipeline
 
-### 2. Identify potential shortcomings with your current pipeline
+The pipeline works fine for most parts of videos, but there are some issues:
+1. The lanes sometimes disappear, especially if origin lines are short. 
+2. Sometimes (in the 3rd video), it draws line like this.. 
 
+Both issues, I think, can be solved by picking other parameters for Hough Transform or Gaussian blur functions. 
 
-One potential shortcoming would be what would happen when ... 
+### 3. Possible improvements 
 
-Another shortcoming could be ...
-
-
-### 3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+One possible way to improve current pipeline is to manually pick better parameters for Hough Transform or Gaussian blur functions. 
+Another way is to use some techniques which are unknown for me at this moment. 
