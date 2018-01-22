@@ -23,7 +23,7 @@ Origin image example | Modified image example
 
 First I need to stangartize input images. To do that, I resize image to the size of 540x960
 A lane can be drawn in any color, so I convert image to grayscale. Then I apply Gaussian blur for suppressing noise and spurious gradients by averaging. 
-![alt text][image1]
+[Origin image example](/examples/line-segments-example.jpg)
 The way to find edges in computer vision is finding a gradient for every pixel, so if a color of a given pixel changes too fast, this pixel is probably a part of edge. To apply this technique, I use Canny edge detection algorithm. 
 ![alt text][image1]
 Before considering which edges are lane lines, I need to "select" a polygonial region in front of the camera, where lane lines often are. 
@@ -36,6 +36,7 @@ At this point I found all possible lines in the selected region. And in order to
 3. For both set of lines I found the mean of the lowest X-value and the mean of the highest X-value. Having Y-coordinates for those points, I can draw one solid line between them.
 ![alt text][image1]
 For the 3rd, challenging video, I made some changes in the function which draws one solid line. I cut the rectangle between the hindrance at the bottom and the bending point of the lines. It seems like it works... for the most parts of the video.
+---
 
 ### 2. Potential shortcomings with the current pipeline
 
@@ -44,6 +45,7 @@ The pipeline works fine for most parts of videos, but there are some issues:
 2. Sometimes (in the 3rd video), it draws line like this.. 
 
 Both issues, I think, can be solved by picking other parameters for Hough Transform or Gaussian blur functions. 
+---
 
 ### 3. Possible improvements 
 
