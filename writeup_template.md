@@ -11,9 +11,6 @@ The goals / steps of this project are the following:
 ---
 ## Images below shows the result of finding lane lines:
 
-
-
-
 Origin image example | Modified image example
 ------------ | -------------
 ![Origin image example](/examples/solidWhiteCurve.jpg) | ![Modified image example](/examples/solidWhiteCurve_final.jpg)
@@ -57,6 +54,7 @@ The pipeline works fine for most parts of videos, but there are some issues:
 ![Bad line example](/examples/bad_line.jpg)
 
 Both issues, I think, can be solved by picking other parameters for Hough Transform or Gaussian blur functions. 
+
 ---
 
 ### 3. Possible improvements 
