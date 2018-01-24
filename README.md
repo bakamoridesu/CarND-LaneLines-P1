@@ -43,6 +43,7 @@ At this point I found all possible lines in the selected region. And in order to
 ![Solid_line image example](/examples/solidWhiteCurve_final_lines.jpg)
 
 For the 3rd, challenging video, I made some changes in the function which draws one solid line. I cut the rectangle between the hindrance at the bottom and the bending point of the lines. It seems like it works... for the most parts of the video.
+
 ---
 
 ### 2. Potential shortcomings with the current pipeline
