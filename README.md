@@ -45,20 +45,24 @@ At this point I found all possible lines in the selected region. And in order to
 For the 3rd, challenging video, I made some changes in the function which draws one solid line. I cut the rectangle between the hindrance at the bottom and the bending point of the lines. It seems like it works... for the most parts of the video.
 
 ---
+## List of fixed shortcomings:
+
+- **The lanes sometimes disappear, especially if origin lines are short (blinks).** Solved by caching previous lane.
+- **Sometimes (in the 3rd video), it draws line like this..**
+
+![Bad line example](/examples/bad_line.jpg)
+
+Solved by measuring slope of left and right lanes. If the slope of a new line differs too much from previous ones, use cached line.
+
+---
 
 ### 2. Potential shortcomings with the current pipeline
 
 The pipeline works fine for most parts of videos, but there are some issues:
-1. The lanes sometimes disappear, especially if origin lines are short. 
-2. Sometimes (in the 3rd video), it draws line like this.. 
-
-![Bad line example](/examples/bad_line.jpg)
-
-Both issues, I think, can be solved by picking other parameters for Hough Transform or Gaussian blur functions. 
+1. When the border casts a shadow line biases a little.
 
 ---
 
 ### 3. Possible improvements 
 
-One possible way to improve current pipeline is to manually pick better parameters for Hough Transform or Gaussian blur functions. 
-Another way is to use some techniques which are unknown for me at this moment. 
+Smoothen brighteness so shadows will not effect on edge detection
