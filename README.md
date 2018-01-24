@@ -47,8 +47,8 @@ For the 3rd, challenging video, I made some changes in the function which draws 
 ---
 ## List of fixed shortcomings:
 
-- **The lanes sometimes disappear, especially if origin lines are short (blinks).** Solved by caching previous lane.
-- **Sometimes (in the 3rd video), it draws line like this..**
+- ~~**The lanes sometimes disappear, especially if origin lines are short (blinks).**~~ Solved by caching previous lane.
+- ~~**Sometimes (in the 3rd video), it draws line like this..**~~
 
 ![Bad line example](/examples/bad_line.jpg)
 
