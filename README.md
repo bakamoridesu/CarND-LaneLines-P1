@@ -59,7 +59,7 @@ Solved by measuring slope of left and right lanes. If the slope of a new line di
 ### 2. Potential shortcomings with the current pipeline
 
 The pipeline works fine for most parts of videos, but there are some issues:
-1. When the border casts a shadow line biases a little.
+1. When the border casts a shadow, line biases a little.
 
 ---
 
